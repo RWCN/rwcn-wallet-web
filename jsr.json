@@ -4,6 +4,6 @@
   "license": "MIT",
   "exports": "./dist/rwcn-wallet-web.js",
   "publish": {
-    "include": ["dist", "README.md", "LICENSE", "package.json"]
+    "include": ["dist", "README.md", "LICENSE"]
   }
 }
