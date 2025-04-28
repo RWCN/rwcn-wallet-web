@@ -1,4 +1,4 @@
-import { Component, createResource, createSignal } from 'solid-js'
+import { type Component, createResource, createSignal } from 'solid-js'
 import { useTranslations } from './context/Translations.tsx'
 // @ts-ignore nope
 import css from './App.css?inline'

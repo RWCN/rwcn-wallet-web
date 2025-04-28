@@ -14,9 +14,9 @@ export default defineConfig({
         switch (format) {
           case 'es':
           case 'esm':
-            return `${entry}.min.js`
+            return `${entry}.js`
           default:
-            return `${entry}.min.js`
+            return `${entry}.js`
         }
       },
       formats: ['es'],

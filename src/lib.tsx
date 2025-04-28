@@ -1,12 +1,12 @@
 import { render as solidRender } from 'solid-js/web'
 import { customElement, noShadowDOM } from 'solid-element'
-import { Actions, App } from './App.tsx'
+import { type Actions, App } from './App.tsx'
 import {
   DEFAULT_TRANSLATIONS,
-  Translations,
+  type Translations,
   TranslationsContext,
 } from './context/Translations.tsx'
-import { Component } from 'solid-js'
+import type { Component } from 'solid-js'
 
 export type Params = {
   translations?: Translations
