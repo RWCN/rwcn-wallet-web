@@ -1,17 +1,22 @@
 import { render as solidRender } from 'solid-js/web'
+import { customElement, noShadowDOM } from 'solid-element'
 import { Actions, App } from './App'
 import {
   DEFAULT_TRANSLATIONS,
   Translations,
   TranslationsContext,
 } from './context/Translations'
+import { Component } from 'solid-js'
 
 export type Params = {
   translations?: Translations
   actions: Actions
 }
 
-export function render(elementId: string, { translations, actions }: Params) {
+export const render = (
+  elementId: string,
+  { translations, actions }: Params,
+) => {
   const rootElement = document.getElementById(elementId)
   if (!rootElement) throw new Error(`Element with id ${elementId} not found`)
 
@@ -27,4 +32,20 @@ export function render(elementId: string, { translations, actions }: Params) {
   )
 
   return dispose
+}
+
+export const WebComponent: Component<{}> = () => {
+  noShadowDOM()
+  return (
+    <App
+      actions={{
+        current: () => 100,
+        transferTo: () => {},
+      }}
+    />
+  )
+}
+
+export const webComponent = () => {
+  customElement('rwcn-wallet', {}, WebComponent)
 }

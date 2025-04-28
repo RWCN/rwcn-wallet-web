@@ -1,8 +1,11 @@
 {
   "name": "@rwcn/wallet-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
-  "exports": "./dist/rwcn-wallet-web.js",
+  "exports": {
+    ".": "./dist/lib.min.js",
+    "./web-component": "./dist/web-component.min.js"
+  },
   "publish": {
     "include": ["dist", "README.md", "LICENSE"]
   }

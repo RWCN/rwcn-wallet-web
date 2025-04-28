@@ -1,5 +1,3 @@
-import 'normalize.css'
-import './index.css'
 import { render } from './lib'
 
 render('root', {

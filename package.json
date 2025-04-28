@@ -1,22 +1,30 @@
 {
   "name": "@rwcn/wallet-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
-  "exports": "./dist/rwcn-wallet-web.js",
+  "exports": {
+    ".": "./dist/lib.min.js",
+    "./web-component": "./dist/web-component.min.js"
+  },
   "license": "LGPL-3.0-or-later",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "deno task build && deno publish && npm publish --access public"
   },
   "devDependencies": {
     "@types/node": "^22.15.2",
     "normalize.css": "^8.0.1",
+    "np": "^10.2.0",
     "prettier": "^3.5.3",
+    "solid-element": "^1.9.1",
     "solid-js": "^1.9.5",
     "solid-styled-jsx": "^0.27.1",
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
+    "vite-plugin-banner": "^0.8.1",
+    "vite-plugin-dts": "^4.5.3",
     "vite-plugin-solid": "^2.11.6"
   },
   "files": [
