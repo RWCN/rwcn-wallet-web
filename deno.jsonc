@@ -3,8 +3,8 @@
   "version": "0.1.2",
   "license": "MIT",
   "exports": {
-    ".": "./dist/lib.min.js",
-    "./web-component": "./dist/web-component.min.js"
+    ".": "./dist/lib.js",
+    "./web-component": "./dist/web-component.js"
   },
   "publish": {
     "include": [
