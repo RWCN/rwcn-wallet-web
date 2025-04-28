@@ -34,6 +34,7 @@ export const render = (
   return dispose
 }
 
+// deno-lint-ignore ban-types
 export const WebComponent: Component<{}> = () => {
   noShadowDOM()
   return (

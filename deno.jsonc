@@ -1,7 +1,7 @@
 {
   "tasks": {
     "dev": "deno run -A --node-modules-dir npm:vite@^6.3.3",
-    "build": "deno check . && deno run -A --node-modules-dir npm:vite@^6.3.3 build",
+    "build": "deno check . && deno lint && deno run -A --node-modules-dir npm:vite@^6.3.3 build",
     "preview": "deno run -A --node-modules-dir npm:vite@^6.3.3 preview"
   },
   "compilerOptions": {

@@ -7,15 +7,19 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   build: {
-    rollupOptions: {
-      input: [
-        resolve(__dirname, 'src/lib.tsx'),
-        resolve(__dirname, 'src/web-component.tsx'),
-      ],
-      output: {
-        entryFileNames: '[name].min.js',
-        preserveModules: false,
+    lib: {
+      name: 'RwcnWalletWeb',
+      entry: ['src/lib.tsx', 'src/web-component.tsx'],
+      fileName: (format, entry) => {
+        switch (format) {
+          case 'es':
+          case 'esm':
+            return `${entry}.min.js`
+          default:
+            return `${entry}.min.js`
+        }
       },
+      formats: ['es'],
     },
   },
   resolve: {

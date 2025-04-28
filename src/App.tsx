@@ -75,6 +75,7 @@ export const App: Component<Props> = props => {
             />
           </div>
           <button
+            type='button'
             class='submit-btn'
             onClick={() => {
               if (transferMoney() > 0 && transferReceiver()) {
