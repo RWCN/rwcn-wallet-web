@@ -1,0 +1,29 @@
+{
+  "tasks": {
+    "dev": "deno run -A --node-modules-dir npm:vite@^6.3.3",
+    "build": "deno check . && deno run -A --node-modules-dir npm:vite@^6.3.3 build",
+    "preview": "deno run -A --node-modules-dir npm:vite@^6.3.3 preview"
+  },
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": []
+  },
+  "imports": {
+    "normalize.css": "npm:normalize.css@^8.0.1",
+    "solid-element": "npm:solid-element@^1.9.1",
+    "solid-js": "npm:solid-js@^1.9.5",
+    "solid-styled-jsx": "npm:solid-styled-jsx@^0.27.1",
+    "vite": "npm:vite@^6.3.3",
+    "vite-plugin-solid": "npm:vite-plugin-solid@^2.11.6"
+  }
+}

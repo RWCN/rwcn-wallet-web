@@ -1,3 +1,3 @@
-import { webComponent } from './lib'
+import { webComponent } from './lib.tsx'
 
 webComponent()
