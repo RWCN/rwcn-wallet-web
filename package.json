@@ -16,7 +16,6 @@
   "devDependencies": {
     "@types/node": "^22.15.2",
     "normalize.css": "^8.0.1",
-    "np": "^10.2.0",
     "prettier": "^3.5.3",
     "solid-element": "^1.9.1",
     "solid-js": "^1.9.5",
