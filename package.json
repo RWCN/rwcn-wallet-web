@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "publish": "deno task build && deno publish && npm publish --access public"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^22.15.2",
